@@ -1,5 +1,6 @@
 # RepData-Peer-Assessment-2
-Link on <a href="http://rpubs.com/kheng/55636" target="_blank">RPubs</a> 
+By Kheng (<a href="http://rpubs.com/kheng/55636" target="_blank">RPubs</a>)
+
 ##Introduction
 
 Storms and other severe weather events can cause both public health and economic problems for communities and municipalities. Many severe events can result in fatalities, injuries, and property damage, and preventing such outcomes to the extent possible is a key concern.
