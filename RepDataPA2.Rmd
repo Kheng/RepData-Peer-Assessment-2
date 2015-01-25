@@ -24,17 +24,24 @@ require(gridExtra)
 
 2. Reading the generated csv file
 ```{r}
-setwd("/Users/Kheng/Documents/Data Sceince/Reproducible Research/Peer Assessment 2")
+setwd("/Users/Kheng/Documents/Data Sceince/Reproducible Research/RepData-Peer-Assessment-2/")
+
+if (!"stormData.csv.bz2" %in% dir("./data/")) {
+    download.file("http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2", destfile = "/Users/Kheng/Documents/Data Sceince/Reproducible Research/RepData-Peer-Assessment-2/stormData.csv.bz2")
+    bunzip2("/Users/Kheng/Documents/Data Sceince/Reproducible Research/RepData-Peer-Assessment-2/stormData.csv.bz2", overwrite=T, remove=F)
+}
 ```
 
 3. Previewing characteristics and summary of the data.
+
 ```{r}
 if (!"stormData" %in% ls()) {
-    stormData <- read.csv("/Users/Kheng/Documents/Data Sceince/Reproducible Research/Peer Assessment 2/stormData.csv", sep = ",")
+    stormData <- read.csv("/Users/Kheng/Documents/Data Sceince/Reproducible Research/RepData-Peer-Assessment-2/stormData.csv", sep = ",")
 }
 dim(stormData)
 head(stormData, n = 2)
 ```
+
 
 ```{r}
 if (dim(stormData)[2] == 37) {
